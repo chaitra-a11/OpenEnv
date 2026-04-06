@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-stochastic-lab-env"
+version = "0.1.0"
+description = "A stochastic RL environment for adaptive lab scheduling with safety constraints"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openenv-core[core]>=0.2.3",
+    "openai>=1.40.0",
+    "uvicorn>=0.30.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+server = "stochastic_lab_env.server.app:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["stochastic_lab_env", "stochastic_lab_env.server"]
+package-dir = { "stochastic_lab_env" = ".", "stochastic_lab_env.server" = "server" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

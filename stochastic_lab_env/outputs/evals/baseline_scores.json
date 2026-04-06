@@ -1,0 +1,986 @@
+{
+  "seeds": [
+    3,
+    7,
+    11,
+    19,
+    23
+  ],
+  "average_cumulative_reward": 0.6453,
+  "average_overall_score": 0.5864,
+  "average_task_completion_score": 0.5628,
+  "average_safety_score": 0.7264,
+  "average_efficiency_score": 0.5,
+  "episodes": [
+    {
+      "seed": 3,
+      "cumulative_reward": 1.9307,
+      "overall_score": 0.681,
+      "task_completion_score": 0.686,
+      "safety_score": 0.796,
+      "efficiency_score": 0.505,
+      "history": [
+        {
+          "time": 1,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 0.2,
+          "overall_score": 0.383,
+          "outcome": "Processed Buffer Preparation: progress 1.00/2.00."
+        },
+        {
+          "time": 2,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.1333,
+          "overall_score": 0.406,
+          "outcome": "Processed Cell Culture Refresh: progress 1.00/3.00."
+        },
+        {
+          "time": 3,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 1.0253,
+          "overall_score": 0.568,
+          "outcome": "Completed Buffer Preparation with task score 0.97."
+        },
+        {
+          "time": 4,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": 0.0889,
+          "overall_score": 0.582,
+          "outcome": "Processed Sterile Assay Transfer: progress 1.00/4.50."
+        },
+        {
+          "time": 5,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.1333,
+          "overall_score": 0.605,
+          "outcome": "Processed Cell Culture Refresh: progress 2.00/3.00."
+        },
+        {
+          "time": 6,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": 0.0889,
+          "overall_score": 0.619,
+          "outcome": "Processed Sterile Assay Transfer: progress 2.00/4.50."
+        },
+        {
+          "time": 7,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": -0.0475,
+          "overall_score": 0.609,
+          "outcome": "Preventive cleaning reduced contamination risk."
+        },
+        {
+          "time": 8,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.8312,
+          "overall_score": 0.726,
+          "outcome": "Completed Cell Culture Refresh with task score 0.82."
+        },
+        {
+          "time": 9,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.5111,
+          "overall_score": 0.682,
+          "outcome": "Unexpected equipment failure disrupted operations. Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 10,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.137,
+          "overall_score": 0.673,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 11,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.0221,
+          "overall_score": 0.677,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 12,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.165,
+          "overall_score": 0.671,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 13,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.0057,
+          "overall_score": 0.681,
+          "outcome": "Idle used for repair and stabilization."
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "easy-buffer-prep",
+          "title": "Buffer Preparation",
+          "grade": "easy",
+          "required_units": 2.0,
+          "completed_units": 2.0,
+          "progress_fraction": 1.0,
+          "deadline": 4,
+          "contamination_sensitivity": 0.2,
+          "equipment_stress": 0.18,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 3,
+          "completion_score": 0.971,
+          "deadline_missed": false
+        },
+        {
+          "task_id": "medium-culture-refresh",
+          "title": "Cell Culture Refresh",
+          "grade": "medium",
+          "required_units": 3.0,
+          "completed_units": 3.0,
+          "progress_fraction": 1.0,
+          "deadline": 6,
+          "contamination_sensitivity": 0.45,
+          "equipment_stress": 0.3,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 8,
+          "completion_score": 0.821,
+          "deadline_missed": true
+        },
+        {
+          "task_id": "hard-sterile-transfer",
+          "title": "Sterile Assay Transfer",
+          "grade": "hard",
+          "required_units": 4.5,
+          "completed_units": 3.0,
+          "progress_fraction": 0.667,
+          "deadline": 9,
+          "contamination_sensitivity": 0.75,
+          "equipment_stress": 0.48,
+          "delay_count": 0,
+          "status": "pending",
+          "completion_time": null,
+          "completion_score": 0.0,
+          "deadline_missed": true
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "cumulative_reward": -2.8089,
+      "overall_score": 0.364,
+      "task_completion_score": 0.257,
+      "safety_score": 0.66,
+      "efficiency_score": 0.43,
+      "history": [
+        {
+          "time": 1,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.1333,
+          "overall_score": 0.367,
+          "outcome": "Processed Cell Culture Refresh: progress 1.00/3.00."
+        },
+        {
+          "time": 2,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": -0.05,
+          "overall_score": 0.377,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 3,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.1708,
+          "overall_score": 0.385,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 4,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.2611,
+          "overall_score": 0.369,
+          "outcome": "Unexpected equipment failure disrupted operations."
+        },
+        {
+          "time": 5,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.03,
+          "overall_score": 0.362,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 6,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": 0.04,
+          "overall_score": 0.367,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 7,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.0025,
+          "overall_score": 0.38,
+          "outcome": "Processed Cell Culture Refresh: progress 1.75/3.00."
+        },
+        {
+          "time": 8,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": -0.665,
+          "overall_score": 0.339,
+          "outcome": "Unexpected equipment failure disrupted operations. Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 9,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": -0.0636,
+          "overall_score": 0.343,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 10,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.375,
+          "overall_score": 0.332,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 11,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.4875,
+          "overall_score": 0.326,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 12,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.5,
+          "overall_score": 0.335,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 13,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": -0.7233,
+          "overall_score": 0.364,
+          "outcome": "Processed Buffer Preparation: progress 1.75/2.00."
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "easy-buffer-prep",
+          "title": "Buffer Preparation",
+          "grade": "easy",
+          "required_units": 2.0,
+          "completed_units": 1.75,
+          "progress_fraction": 0.875,
+          "deadline": 5,
+          "contamination_sensitivity": 0.2,
+          "equipment_stress": 0.18,
+          "delay_count": 0,
+          "status": "pending",
+          "completion_time": null,
+          "completion_score": 0.0,
+          "deadline_missed": true
+        },
+        {
+          "task_id": "medium-culture-refresh",
+          "title": "Cell Culture Refresh",
+          "grade": "medium",
+          "required_units": 3.0,
+          "completed_units": 2.5,
+          "progress_fraction": 0.833,
+          "deadline": 6,
+          "contamination_sensitivity": 0.45,
+          "equipment_stress": 0.3,
+          "delay_count": 0,
+          "status": "pending",
+          "completion_time": null,
+          "completion_score": 0.0,
+          "deadline_missed": true
+        },
+        {
+          "task_id": "hard-sterile-transfer",
+          "title": "Sterile Assay Transfer",
+          "grade": "hard",
+          "required_units": 4.5,
+          "completed_units": 1.0,
+          "progress_fraction": 0.222,
+          "deadline": 9,
+          "contamination_sensitivity": 0.75,
+          "equipment_stress": 0.48,
+          "delay_count": 0,
+          "status": "pending",
+          "completion_time": null,
+          "completion_score": 0.0,
+          "deadline_missed": true
+        }
+      ]
+    },
+    {
+      "seed": 11,
+      "cumulative_reward": -0.0018,
+      "overall_score": 0.531,
+      "task_completion_score": 0.501,
+      "safety_score": 0.658,
+      "efficiency_score": 0.49,
+      "history": [
+        {
+          "time": 1,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 0.2,
+          "overall_score": 0.384,
+          "outcome": "Processed Buffer Preparation: progress 1.00/2.00."
+        },
+        {
+          "time": 2,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": 0.0889,
+          "overall_score": 0.396,
+          "outcome": "Processed Sterile Assay Transfer: progress 1.00/4.50."
+        },
+        {
+          "time": 3,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": -0.1167,
+          "overall_score": 0.392,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 4,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.182,
+          "overall_score": 0.399,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 5,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 0.794,
+          "overall_score": 0.541,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 6,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.1409,
+          "overall_score": 0.536,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 7,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.11,
+          "overall_score": 0.541,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 8,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.5486,
+          "overall_score": 0.493,
+          "outcome": "Unexpected equipment failure disrupted operations. Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 9,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.0734,
+          "overall_score": 0.498,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 10,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.1875,
+          "overall_score": 0.486,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 11,
+          "action": {
+            "metadata": {},
+            "action_type": "idle"
+          },
+          "reward": -0.17,
+          "overall_score": 0.496,
+          "outcome": "Idle used for repair and stabilization."
+        },
+        {
+          "time": 12,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": -0.2225,
+          "overall_score": 0.513,
+          "outcome": "Processed Cell Culture Refresh: progress 1.75/3.00."
+        },
+        {
+          "time": 13,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": -0.3457,
+          "overall_score": 0.531,
+          "outcome": "Processed Cell Culture Refresh: progress 2.50/3.00."
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "easy-buffer-prep",
+          "title": "Buffer Preparation",
+          "grade": "easy",
+          "required_units": 2.0,
+          "completed_units": 2.0,
+          "progress_fraction": 1.0,
+          "deadline": 5,
+          "contamination_sensitivity": 0.2,
+          "equipment_stress": 0.18,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 5,
+          "completion_score": 0.993,
+          "deadline_missed": false
+        },
+        {
+          "task_id": "medium-culture-refresh",
+          "title": "Cell Culture Refresh",
+          "grade": "medium",
+          "required_units": 3.0,
+          "completed_units": 2.5,
+          "progress_fraction": 0.833,
+          "deadline": 7,
+          "contamination_sensitivity": 0.45,
+          "equipment_stress": 0.3,
+          "delay_count": 0,
+          "status": "pending",
+          "completion_time": null,
+          "completion_score": 0.0,
+          "deadline_missed": true
+        },
+        {
+          "task_id": "hard-sterile-transfer",
+          "title": "Sterile Assay Transfer",
+          "grade": "hard",
+          "required_units": 4.5,
+          "completed_units": 2.0,
+          "progress_fraction": 0.444,
+          "deadline": 9,
+          "contamination_sensitivity": 0.75,
+          "equipment_stress": 0.48,
+          "delay_count": 0,
+          "status": "pending",
+          "completion_time": null,
+          "completion_score": 0.0,
+          "deadline_missed": true
+        }
+      ]
+    },
+    {
+      "seed": 19,
+      "cumulative_reward": 1.5514,
+      "overall_score": 0.655,
+      "task_completion_score": 0.658,
+      "safety_score": 0.726,
+      "efficiency_score": 0.545,
+      "history": [
+        {
+          "time": 1,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 0.2,
+          "overall_score": 0.384,
+          "outcome": "Processed Buffer Preparation: progress 1.00/2.00."
+        },
+        {
+          "time": 2,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": 0.0889,
+          "overall_score": 0.396,
+          "outcome": "Processed Sterile Assay Transfer: progress 1.00/4.50."
+        },
+        {
+          "time": 3,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.1333,
+          "overall_score": 0.419,
+          "outcome": "Processed Cell Culture Refresh: progress 1.00/3.00."
+        },
+        {
+          "time": 4,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 0.7702,
+          "overall_score": 0.552,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 5,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.182,
+          "overall_score": 0.558,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 6,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.1611,
+          "overall_score": 0.546,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 7,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.1194,
+          "overall_score": 0.546,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 8,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.0583,
+          "overall_score": 0.572,
+          "outcome": "Processed Cell Culture Refresh: progress 2.00/3.00."
+        },
+        {
+          "time": 9,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.3186,
+          "overall_score": 0.556,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 10,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": -0.0798,
+          "overall_score": 0.56,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 11,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.5534,
+          "overall_score": 0.639,
+          "outcome": "Completed Cell Culture Refresh with task score 0.65."
+        },
+        {
+          "time": 12,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": 0.0054,
+          "overall_score": 0.655,
+          "outcome": "Processed Sterile Assay Transfer: progress 4.00/4.50."
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "easy-buffer-prep",
+          "title": "Buffer Preparation",
+          "grade": "easy",
+          "required_units": 2.0,
+          "completed_units": 2.0,
+          "progress_fraction": 1.0,
+          "deadline": 4,
+          "contamination_sensitivity": 0.2,
+          "equipment_stress": 0.18,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 4,
+          "completion_score": 0.965,
+          "deadline_missed": false
+        },
+        {
+          "task_id": "medium-culture-refresh",
+          "title": "Cell Culture Refresh",
+          "grade": "medium",
+          "required_units": 3.0,
+          "completed_units": 3.0,
+          "progress_fraction": 1.0,
+          "deadline": 6,
+          "contamination_sensitivity": 0.45,
+          "equipment_stress": 0.3,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 11,
+          "completion_score": 0.653,
+          "deadline_missed": true
+        },
+        {
+          "task_id": "hard-sterile-transfer",
+          "title": "Sterile Assay Transfer",
+          "grade": "hard",
+          "required_units": 4.5,
+          "completed_units": 4.0,
+          "progress_fraction": 0.889,
+          "deadline": 8,
+          "contamination_sensitivity": 0.75,
+          "equipment_stress": 0.48,
+          "delay_count": 0,
+          "status": "pending",
+          "completion_time": null,
+          "completion_score": 0.0,
+          "deadline_missed": true
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "cumulative_reward": 2.555,
+      "overall_score": 0.701,
+      "task_completion_score": 0.712,
+      "safety_score": 0.792,
+      "efficiency_score": 0.53,
+      "history": [
+        {
+          "time": 1,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": 0.0889,
+          "overall_score": 0.357,
+          "outcome": "Processed Sterile Assay Transfer: progress 1.00/4.50."
+        },
+        {
+          "time": 2,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.1333,
+          "overall_score": 0.38,
+          "outcome": "Processed Cell Culture Refresh: progress 1.00/3.00."
+        },
+        {
+          "time": 3,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 0.2,
+          "overall_score": 0.418,
+          "outcome": "Processed Buffer Preparation: progress 1.00/2.00."
+        },
+        {
+          "time": 4,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.1611,
+          "overall_score": 0.404,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 5,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.182,
+          "overall_score": 0.409,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 6,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.1033,
+          "overall_score": 0.43,
+          "outcome": "Processed Cell Culture Refresh: progress 2.00/3.00."
+        },
+        {
+          "time": 7,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "easy-buffer-prep"
+          },
+          "reward": 0.6299,
+          "overall_score": 0.534,
+          "outcome": "Contamination event triggered additional safety overhead."
+        },
+        {
+          "time": 8,
+          "action": {
+            "metadata": {},
+            "action_type": "clean"
+          },
+          "reward": 0.0963,
+          "overall_score": 0.538,
+          "outcome": "Deep cleaning reduced contamination and improved safety."
+        },
+        {
+          "time": 9,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.0686,
+          "overall_score": 0.55,
+          "outcome": "Processed Sterile Assay Transfer: progress 3.00/4.50."
+        },
+        {
+          "time": 10,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "medium-culture-refresh"
+          },
+          "reward": 0.6358,
+          "overall_score": 0.639,
+          "outcome": "Completed Cell Culture Refresh with task score 0.70."
+        },
+        {
+          "time": 11,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": -0.0461,
+          "overall_score": 0.653,
+          "outcome": "Processed Sterile Assay Transfer: progress 4.00/4.50."
+        },
+        {
+          "time": 12,
+          "action": {
+            "metadata": {},
+            "action_type": "process",
+            "task_id": "hard-sterile-transfer"
+          },
+          "reward": 0.7613,
+          "overall_score": 0.701,
+          "outcome": "Completed Sterile Assay Transfer with task score 0.60."
+        }
+      ],
+      "tasks": [
+        {
+          "task_id": "easy-buffer-prep",
+          "title": "Buffer Preparation",
+          "grade": "easy",
+          "required_units": 2.0,
+          "completed_units": 2.0,
+          "progress_fraction": 1.0,
+          "deadline": 5,
+          "contamination_sensitivity": 0.2,
+          "equipment_stress": 0.18,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 7,
+          "completion_score": 0.844,
+          "deadline_missed": true
+        },
+        {
+          "task_id": "medium-culture-refresh",
+          "title": "Cell Culture Refresh",
+          "grade": "medium",
+          "required_units": 3.0,
+          "completed_units": 3.0,
+          "progress_fraction": 1.0,
+          "deadline": 6,
+          "contamination_sensitivity": 0.45,
+          "equipment_stress": 0.3,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 10,
+          "completion_score": 0.697,
+          "deadline_missed": true
+        },
+        {
+          "task_id": "hard-sterile-transfer",
+          "title": "Sterile Assay Transfer",
+          "grade": "hard",
+          "required_units": 4.5,
+          "completed_units": 4.5,
+          "progress_fraction": 1.0,
+          "deadline": 8,
+          "contamination_sensitivity": 0.75,
+          "equipment_stress": 0.48,
+          "delay_count": 0,
+          "status": "completed",
+          "completion_time": 12,
+          "completion_score": 0.596,
+          "deadline_missed": true
+        }
+      ]
+    }
+  ]
+}
